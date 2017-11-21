@@ -1,0 +1,59 @@
+sudo apt-get update 
+
+add-apt-repository ppa:openjdk-r/ppa 
+apt-get update 
+apt-get install -y openjdk-8-jdk 
+
+
+wget http://download.teamviewer.com/download/teamviewer_i386.deb 
+gdebi teamviewer_i386.deb 
+#apt-get -f install 
+
+apt-get install -y filezilla 
+
+sudo apt-get install apache2
+
+sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
+sudo mysql_install_db
+sudo /usr/bin/mysql_secure_installation
+
+sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
+
+
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get install php7.0 php5.6 php5.6-mysql php-gettext php5.6-mbstring php-xdebug libapache2-mod-php5.6 libapache2-mod-php7.0
+
+apt-get install git
+
+sudo apt-get install mysql-workbench
+
+sudo apt-get install gimp
+
+sudo apt-get install pinta
+
+#sudo curl -L https://github.com/docker/machine/releases/download/v0.8.2/docker-machine-`uname -s`-`uname -m` >/usr/local/bin/docker-machine && \ chmod +x /usr/local/bin/docker-machine
+#Docker Ubuntu 16.04
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates
+sudo apt-key adv \
+               --keyserver hkp://ha.pool.sks-keyservers.net:80 \
+               --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-get update
+apt-cache policy docker-engine
+apt-get upgrade
+sudo apt-get update
+sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+sudo apt-get update
+sudo apt-get install docker-engine
+#Manage Docker as a non-root user
+sudo groupadd docker
+sudo usermod -aG docker $USER
+#referencia https://docs.docker.com/engine/installation/linux/ubuntulinux/#/install-the-latest-version
+
+atom
+kazam
+mysql workbench
+vlc
+git graken
+git
+http://dbeaver.jkiss.org/files/dbeaver-ce_latest_amd64.deb
