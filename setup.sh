@@ -69,12 +69,14 @@ tar -xzf postman.tar.gz
 rm postman.tar.gz
 mkdir ~/Programas
 mv Postman ~/Programas/
+#sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
 echo INSTALL GRADLE
 wget https://services.gradle.org/distributions/gradle-4.3.1-all.zip
-mkdir /opt/gradle
-unzip -d /opt/gradle gradle-4.3.1-all.zip
+sudo mkdir /opt/gradle
+sudo unzip -d /opt/gradle gradle-4.3.1-all.zip
 ls /opt/gradle/gradle-4.3.1
+#sudo ln -s /opt/gradle/gradle-4.3.1 /usr/bin/gradle
 
 echo INSTALL GRAFICOS
 sudo apt-get install gimp -y
