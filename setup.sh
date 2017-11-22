@@ -64,15 +64,16 @@ wget https://github.com/meetfranz/franz/releases/download/v5.0.0-beta.13/franz_5
 sudo dpkg -i franz_5.0.0-beta.13_amd64.deb
 
 echo INSTALL POSTMAN
-wget https://dl.pstmn.io/download/latest/linux64
-tar -xzf Postman-linux-x64-5.3.2.tar.gz
+wget -q https://dl.pstmn.io/download/latest/linux?arch=64 -O postman.tar.gz
+tar -xzf postman.tar.gz
+rm postman.tar.gz
 mkdir ~/Programas
 mv Postman ~/Programas/
 
 echo INSTALL GRADLE
 wget https://services.gradle.org/distributions/gradle-4.3.1-all.zip
 mkdir /opt/gradle
-unzip -d /opt/gradle gradle-4.3.1-bin.zip
+unzip -d /opt/gradle gradle-4.3.1-all.zip
 ls /opt/gradle/gradle-4.3.1
 
 echo INSTALL GRAFICOS
@@ -86,6 +87,10 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo apt-get update
 sudo apt-get install spotify-client
 
-sudo apt-get autoremove
+sudo add-apt-repository ppa:webupd8team/y-ppa-manager
+sudo apt-get upgrade
+sudo apt-get install y-ppa-manager
+
+sudo apt-get autoremove -y
 
 sudo apt --fix-broken install
